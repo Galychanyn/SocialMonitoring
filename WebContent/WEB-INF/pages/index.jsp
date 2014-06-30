@@ -16,7 +16,7 @@
 	<%@include file="/WEB-INF/pages/part/menu.jsp"%>
 
 	<!-- Main jumbotron for a primary marketing message or call to action -->
-	<div class="jumbotron">
+	<div id="hello" class="jumbotron">
 		<div class="container">
 			<h1>Hello, world!</h1>
 			<p>This is a template for a simple marketing or informational
@@ -29,7 +29,7 @@
 			</p>
 		</div>
 	</div>
-
+	
 	<!--  div class="container">
       <!-- Example row of columns -->
 	<!--<div class="row">

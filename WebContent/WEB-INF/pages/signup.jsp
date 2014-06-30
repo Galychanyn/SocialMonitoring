@@ -17,6 +17,7 @@
 	<%@include file="/WEB-INF/pages/part/menu.jsp"%>
 	<div class="jumbotron">
 		<div class="container">
+			<span id="errorLogin" class="label label-danger">${errorMsg}</span>
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
 					<label for="firstname" class="col-sm-2 control-label">First
