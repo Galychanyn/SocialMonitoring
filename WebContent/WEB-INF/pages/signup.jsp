@@ -20,19 +20,25 @@
 			<span id="errorLogin" class="label label-danger">${errorMsg}</span>
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
-					<label for="firstname" class="col-sm-2 control-label">First
-						Name</label>
+					<label for="firstname" class="col-sm-2 control-label">User
+						Name:</label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" id="firstname"
 							placeholder="Enter First Name">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="lastname" class="col-sm-2 control-label">Last
-						Name</label>
+					<label for="password" class="col-sm-2 control-label">Password:</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="lastname"
-							placeholder="Enter Last Name">
+						<input type="password" placeholder="Enter Password" class="form-control"
+							name="pass_signup">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="email" class="col-sm-2 control-label">Email:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="email"
+							placeholder="Enter Email">
 					</div>
 				</div>
 				<div class="form-group">
@@ -45,7 +51,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-default">Sign in</button>
+						<button type="submit" class="btn btn-default">Sign up</button>
 					</div>
 				</div>
 			</form>

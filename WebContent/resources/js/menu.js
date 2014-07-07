@@ -14,7 +14,24 @@ $(function() {
 //	addArticle.click(function(){
 //		insertForm.toggle('slow');
 //	});
-		
+	
+	/*запускається на початку, перевіряє чи користувач зареєстрований*/
+	var verifyLogin = function() {
+		$.ajax({
+			url: "check-login",
+			success: function(user) {
+				if (null != user) {
+					loginform.hide();
+					logoutform.show();
+					//registerField.html("Hello, " + user.name + "!");
+				} else {
+					loginform.hide();
+					logoutform.show();
+				}
+			}
+		});
+	};
+	
 	/*авторизація користувача*/
 	loginform.submit( function(){
 		if (validateForm())	{
@@ -24,11 +41,12 @@ $(function() {
 			dataType: "text",
 			data: loginform.serialize(),
 			success: function(data) {
-//				loginform.hide();
+				verifyLogin();
+				loginform.hide();
 //				//verifyLogin();
 //				location.replace("index");
-//				logoutform.show();
-				//location.replace("signup");
+				logoutform.show();
+				location.replace("home");
 			},
 			error: function(error) {
 				//location.replace("signup");
@@ -41,6 +59,13 @@ $(function() {
 	    }
 		return false;
 	});
+	
+	var init = function() {
+		//countUser();
+		verifyLogin();
+	};
+	
+	init();
 });
 
 function validateForm() {
